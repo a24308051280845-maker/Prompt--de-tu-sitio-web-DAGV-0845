@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipos de Emergencia — Emergencias Pro</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    body { background-color: #000000; color: #f5f5f7; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
+    
+    header { position: sticky; top: 0; z-index: 1000; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 12px 20px; }
+    nav { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+    
+    .nav-logo-group { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+    .logo-svg { filter: drop-shadow(0 0 12px rgba(229, 57, 53, 0.6)); }
+    .heart-pulse { transform-origin: center; animation: latido 1.2s infinite ease-in-out; }
+    @keyframes latido { 0% { transform: scale(1); } 50% { transform: scale(1.22); } 100% { transform: scale(1); } }
+    .site-brand { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; }
+
+    .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .nav-btn { padding: 8px 16px; border-radius: 980px; font-size: 0.85rem; font-weight: 500; text-decoration: none; color: #86868b; transition: all 0.3s ease; }
+    .nav-btn:hover { color: #f5f5f7; background: rgba(255, 255, 255, 0.1); }
+    .nav-btn.active { color: #ffffff; background: #0071e3; font-weight: 600; }
+
+    .container { max-width: 1050px; margin: 0 auto; padding: 50px 20px; text-align: center; }
+    .page-title { font-size: 2.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; }
+    .page-subtitle { color: #86868b; font-size: 1.2rem; margin-bottom: 40px; }
+
+    /* TARJETAS CON COLORES ESPECÍFICOS Y BRINCO */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; }
+    .type-card { padding: 35px 24px; border-radius: 28px; text-align: center; color: #1d1d1f; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .type-card:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 20px 40px rgba(255,255,255,0.15); }
+
+    /* COLORES SOLICITADOS */
+    .card-medica { background: #ffcccc; border-top: 6px solid #ff3b30; }
+    .card-incendio { background: linear-gradient(135deg, #ffcdd2 0%, #bbdefb 100%); border-top: 6px solid #ff9500; }
+    .card-seguridad { background: #b3e5fc; border-top: 6px solid #0071e3; }
+    .card-desastre { background: #c8e6c9; border-top: 6px solid #34c759; }
+
+    .type-card h2 { font-size: 1.35rem; font-weight: 800; margin: 15px 0 10px 0; color: #000000; }
+    .type-card p { font-size: 0.95rem; line-height: 1.55; color: #2c2c2e; font-weight: 500; }
+    .icon-lg { font-size: 52px; }
+
+    footer { text-align: center; padding: 30px 20px; background: #000; color: #6e6e73; font-size: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="./inicio.html" class="nav-logo-group">
+        <svg class="logo-svg" viewBox="0 0 100 100" width="42" height="42">
+          <rect x="38" y="10" width="24" height="80" rx="6" fill="#e53935" />
+          <rect x="10" y="38" width="80" height="24" rx="6" fill="#e53935" />
+          <g class="heart-pulse">
+            <path d="M50,62 C43,55 35,47 35,40 C35,34 39,30 44,30 C47,30 49,32 50,34 C51,32 53,30 56,30 C61,30 65,34 65,40 C65,47 57,55 50,62 Z" fill="#ff5252" stroke="#ffffff" stroke-width="2" />
+          </g>
+        </svg>
+        <span class="site-brand">Emergencias Pro</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="./inicio.html" class="nav-btn">Inicio</a>
+        <a href="./numeros.html" class="nav-btn">Números</a>
+        <a href="./tipos.html" class="nav-btn active">Tipos</a>
+        <a href="./recomendaciones.html" class="nav-btn">Pasos</a>
+        <a href="./contacto.html" class="nav-btn">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="page-title">Clasificación de Siniestros</h1>
+    <p class="page-subtitle">Identifique la categoría del suceso para activar el protocolo correspondiente.</p>
+
+    <div class="cards-grid">
+      <div class="type-card card-medica">
+        <div class="icon-lg">🩺</div>
+        <h2>Emergencias Médicas</h2>
+        <p>Abarca infartos, traumatismos severos, pérdida del conocimiento, heridas abiertas sangrantes o paros respiratorios que requieren apoyo vital inmediato.</p>
+      </div>
+
+      <div class="type-card card-incendio">
+        <div class="icon-lg">🔥🌊</div>
+        <h2>Incendios e Inundaciones</h2>
+        <p>Incluye incendios estructurales, fugas o explosiones de gas, colapso de redes hidráulicas e inundaciones urbanas con riesgo inminente.</p>
+      </div>
+
+      <div class="type-card card-seguridad">
+        <div class="icon-lg">👮‍♂️</div>
+        <h2>Seguridad Ciudadana</h2>
+        <p>Involucra actos delictivos en curso, robos, violencia intrafamiliar, accidentes vehiculares graves o situaciones que amenacen la integridad física.</p>
+      </div>
+
+      <div class="type-card card-desastre">
+        <div class="icon-lg">🌋</div>
+        <h2>Desastres Naturales</h2>
+        <p>Fenómenos naturales de alto impacto como sismos, terremotos, deslizamientos de tierra, tormentas eléctricas severas u huracanes.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Emergencias Pro &copy; Portal de Auxilio Ciudadano. Diseñado para ofrecer respuesta inmediata.</p>
+  </footer>
+
+</body>
+</html>

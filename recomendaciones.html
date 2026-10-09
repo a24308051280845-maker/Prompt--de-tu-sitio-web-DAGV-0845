@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendaciones — Emergencias Pro</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    body { background-color: #000000; color: #f5f5f7; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
+    
+    header { position: sticky; top: 0; z-index: 1000; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 12px 20px; }
+    nav { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+    
+    .nav-logo-group { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+    .logo-svg { filter: drop-shadow(0 0 12px rgba(229, 57, 53, 0.6)); }
+    .heart-pulse { transform-origin: center; animation: latido 1.2s infinite ease-in-out; }
+    @keyframes latido { 0% { transform: scale(1); } 50% { transform: scale(1.22); } 100% { transform: scale(1); } }
+    .site-brand { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; }
+
+    .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .nav-btn { padding: 8px 16px; border-radius: 980px; font-size: 0.85rem; font-weight: 500; text-decoration: none; color: #86868b; transition: all 0.3s ease; }
+    .nav-btn:hover { color: #f5f5f7; background: rgba(255, 255, 255, 0.1); }
+    .nav-btn.active { color: #ffffff; background: #0071e3; font-weight: 600; }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 50px 20px; }
+    .page-title { font-size: 2.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; text-align: center; }
+    .page-subtitle { color: #86868b; font-size: 1.2rem; margin-bottom: 40px; text-align: center; }
+
+    /* TARJETAS CON ANIMACIÓN SCROLL */
+    .step-card { background: #161617; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 24px; padding: 28px; margin-bottom: 20px; display: flex; align-items: center; gap: 24px; opacity: 0; transform: translateY(30px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+    .step-card.visible { opacity: 1; transform: translateY(0); }
+    
+    .step-number { background: linear-gradient(135deg, #0071e3 0%, #42a5f5 100%); color: white; font-size: 1.5rem; font-weight: 900; min-width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,113,227,0.4); }
+    .step-content h3 { font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 6px; }
+    .step-content p { color: #a1a1a6; line-height: 1.55; font-size: 0.98rem; }
+
+    footer { text-align: center; padding: 30px 20px; background: #000; color: #6e6e73; font-size: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="./inicio.html" class="nav-logo-group">
+        <svg class="logo-svg" viewBox="0 0 100 100" width="42" height="42">
+          <rect x="38" y="10" width="24" height="80" rx="6" fill="#e53935" />
+          <rect x="10" y="38" width="80" height="24" rx="6" fill="#e53935" />
+          <g class="heart-pulse">
+            <path d="M50,62 C43,55 35,47 35,40 C35,34 39,30 44,30 C47,30 49,32 50,34 C51,32 53,30 56,30 C61,30 65,34 65,40 C65,47 57,55 50,62 Z" fill="#ff5252" stroke="#ffffff" stroke-width="2" />
+          </g>
+        </svg>
+        <span class="site-brand">Emergencias Pro</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="./inicio.html" class="nav-btn">Inicio</a>
+        <a href="./numeros.html" class="nav-btn">Números</a>
+        <a href="./tipos.html" class="nav-btn">Tipos</a>
+        <a href="./recomendaciones.html" class="nav-btn active">Pasos</a>
+        <a href="./contacto.html" class="nav-btn">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="page-title">Protocolos de Actuación</h1>
+    <p class="page-subtitle">Siga esta secuencia de pasos ante cualquier evento crítico.</p>
+
+    <div class="step-card">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3>Mantener la Calma</h3>
+        <p>Conserve la serenidad para evaluar el panorama objetivamente y tomar decisiones efectivas sin entrar en pánico.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3>Verificar la Seguridad del Entorno</h3>
+        <p>Asegúrese de que la zona esté libre de riesgos latentes (fuego, fugas de gas, cables de alta tensión) antes de brindar auxilio.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h3>Llamar a los Servicios de Auxilio</h3>
+        <p>Comuníquese de inmediato al 911 precisando la ubicación exacta, referencias visuales y la cantidad de afectados.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <h3>Proporcionar Asistencia Básica</h3>
+        <p>Si cuenta con capacitación y el entorno es seguro, brinde primeros auxilios básicos sin mover innecesariamente a los heridos.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-number">5</div>
+      <div class="step-content">
+        <h3>Seguir Indicaciones Oficiales</h3>
+        <p>Atienda con precisión las instrucciones impartidas por los operadores telefónicos o los rescatistas al arribar.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Emergencias Pro &copy; Portal de Auxilio Ciudadano. Diseñado para ofrecer respuesta inmediata.</p>
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.step-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Números de Emergencia — Emergencias Pro</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    body { background-color: #000000; color: #f5f5f7; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
+    
+    header { position: sticky; top: 0; z-index: 1000; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 12px 20px; }
+    nav { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+    
+    .nav-logo-group { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+    .logo-svg { filter: drop-shadow(0 0 12px rgba(229, 57, 53, 0.6)); }
+    .heart-pulse { transform-origin: center; animation: latido 1.2s infinite ease-in-out; }
+    @keyframes latido { 0% { transform: scale(1); } 50% { transform: scale(1.22); } 100% { transform: scale(1); } }
+    .site-brand { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; }
+
+    .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .nav-btn { padding: 8px 16px; border-radius: 980px; font-size: 0.85rem; font-weight: 500; text-decoration: none; color: #86868b; transition: all 0.3s ease; }
+    .nav-btn:hover { color: #f5f5f7; background: rgba(255, 255, 255, 0.1); }
+    .nav-btn.active { color: #ffffff; background: #0071e3; font-weight: 600; }
+
+    .container { max-width: 1050px; margin: 0 auto; padding: 50px 20px; text-align: center; }
+    .page-title { font-size: 2.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; }
+    .page-subtitle { color: #86868b; font-size: 1.2rem; margin-bottom: 40px; }
+
+    /* TARJETAS CON BRINCO Y ESTILO APPLE */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .card { background: #161617; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 24px; padding: 32px 24px; text-align: center; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden; }
+    .card:hover { transform: translateY(-10px) scale(1.02); border-color: #0071e3; box-shadow: 0 20px 40px rgba(0, 113, 227, 0.25); }
+    
+    .card-icon { font-size: 48px; margin-bottom: 15px; }
+    .card-title { font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
+    .card-number { font-size: 2.5rem; font-weight: 900; color: #ff453a; letter-spacing: -0.03em; margin-bottom: 12px; }
+    .card-desc { font-size: 0.92rem; color: #a1a1a6; line-height: 1.5; margin-bottom: 20px; }
+    .btn-call { display: inline-block; padding: 8px 20px; background: rgba(0, 113, 227, 0.15); border: 1px solid #0071e3; color: #2997ff; border-radius: 980px; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+
+    footer { text-align: center; padding: 30px 20px; background: #000; color: #6e6e73; font-size: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="./inicio.html" class="nav-logo-group">
+        <svg class="logo-svg" viewBox="0 0 100 100" width="42" height="42">
+          <rect x="38" y="10" width="24" height="80" rx="6" fill="#e53935" />
+          <rect x="10" y="38" width="80" height="24" rx="6" fill="#e53935" />
+          <g class="heart-pulse">
+            <path d="M50,62 C43,55 35,47 35,40 C35,34 39,30 44,30 C47,30 49,32 50,34 C51,32 53,30 56,30 C61,30 65,34 65,40 C65,47 57,55 50,62 Z" fill="#ff5252" stroke="#ffffff" stroke-width="2" />
+          </g>
+        </svg>
+        <span class="site-brand">Emergencias Pro</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="./inicio.html" class="nav-btn">Inicio</a>
+        <a href="./numeros.html" class="nav-btn active">Números</a>
+        <a href="./tipos.html" class="nav-btn">Tipos</a>
+        <a href="./recomendaciones.html" class="nav-btn">Pasos</a>
+        <a href="./contacto.html" class="nav-btn">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="page-title">Líneas Directas de Atención</h1>
+    <p class="page-subtitle">Acceso inmediato con un solo toque a los cuerpos de auxilio.</p>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🚨</div>
+        <div class="card-title">Emergencias Generales</div>
+        <div class="card-number">911</div>
+        <p class="card-desc">Atención unificada de auxilio, despacho de ambulancias, patrullas y bomberos 24/7.</p>
+        <a href="tel:911" class="btn-call">Llamar Ahora</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🚑</div>
+        <div class="card-title">Cruz Roja / Ambulancias</div>
+        <div class="card-number">065</div>
+        <p class="card-desc">Atención prehospitalaria urgente, traslados en ambulancia y apoyo de paramédicos.</p>
+        <a href="tel:065" class="btn-call">Llamar Ahora</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🚒</div>
+        <div class="card-title">Cuerpo de Bomberos</div>
+        <div class="card-number">911</div>
+        <p class="card-desc">Control de incendios urbanos, fugas de gas licuado, rescate de estructuras e inundaciones.</p>
+        <a href="tel:911" class="btn-call">Llamar Ahora</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🚔</div>
+        <div class="card-title">Policía & Seguridad</div>
+        <div class="card-number">911</div>
+        <p class="card-desc">Seguridad ciudadana, atención a faltas graves, auxilio vial y prevención del delito.</p>
+        <a href="tel:911" class="btn-call">Llamar Ahora</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <div class="card-title">Protección Civil</div>
+        <div class="card-number">071</div>
+        <p class="card-desc">Evaluación de riesgos estructurales, respuesta ante contingencias y desastres naturales.</p>
+        <a href="tel:071" class="btn-call">Llamar Ahora</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Emergencias Pro &copy; Portal de Auxilio Ciudadano. Diseñado para ofrecer respuesta inmediata.</p>
+  </footer>
+
+</body>
+</html>
